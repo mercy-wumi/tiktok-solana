@@ -1,5 +1,14 @@
-import styles from "../styles/Home.module.css";
+import MainView from "../components/MainView";
 
 export default function Home() {
-  return <div className={styles.container}>work starts..</div>;
+  let connected = true;
+  return (
+    <div className="app">
+      {connected ? (
+        <MainView />
+      ) : (
+        <div className="loginContainer">connect button</div>
+      )}
+    </div>
+  );
 }
